@@ -27,4 +27,4 @@ jobs:
     - name: run the program
       run: bin/helloworld.exe
     - name: list the amount of memory
-      run: free -h
+      run: sysctl -a | grep hw.memsize
