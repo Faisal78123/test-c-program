@@ -28,3 +28,5 @@ jobs:
       run: bin/helloworld.exe
     - name: list the amount of memory
       run: sysctl -a | grep hw.memsize
+    - name: list the amount of swap
+      run: sysctl -a | grep vm.swapusage
