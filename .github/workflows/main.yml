@@ -36,9 +36,7 @@ jobs:
       run: pwd
     - name: create a test file
       run: touch testfile.txt
-    - name: install pv
-      run: brew install pv dialog
     - name: write to the textfile
-      run: dd if=/dev/urandom bs=100m count=500 | pv | dd of=testfile.txt
+      run: dd if=/dev/urandom of=testfile.txt bs=100m count=500 & while pkill -INFO -x dd; do sleep 1; done
 
 
