@@ -37,6 +37,6 @@ jobs:
     - name: create a test file
       run: touch testfile.txt
     - name: write to the textfile
-      run: dd if=/dev/urandom of=testfile.txt bs=100m count=500 & while pkill -INFO -x dd; do sleep 1; done
+      run: dd if=/dev/urandom of=testfile.txt & while pkill -INFO -x dd; do sleep 1; done
 
 
