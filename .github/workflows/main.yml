@@ -32,6 +32,12 @@ jobs:
       run: sysctl -a | grep vm.swapusage
     - name: list the amount disk space
       run: df -h
+    - name: print working directory
+      run: pwd
+    - name: create a test file
+      run: touch testfile.txt
+    - name: write to the textfile
+      run: dd if=/dev/urandom of=/testfile.txt & while pkill -INFO -x dd; do sleep 1; done
 
 
 
