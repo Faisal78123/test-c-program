@@ -13,7 +13,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: macos-10.15
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -26,10 +26,10 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: run the program
       run: bin/helloworld.exe
-    - name: list the amount of memory
-      run: sysctl -a | grep hw.memsize
-    - name: list the amount of swap
-      run: sysctl -a | grep vm.swapusage
+#    - name: list the amount of memory
+#      run: sysctl -a | grep hw.memsize
+#    - name: list the amount of swap
+#      run: sysctl -a | grep vm.swapusage
     - name: list the amount disk space
       run: df -h
     - name: print working directory
