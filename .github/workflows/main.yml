@@ -34,9 +34,6 @@ jobs:
       run: df -h
     - name: print working directory
       run: pwd
-    - name: create a test file
-      run: touch testfile.txt
-    - name: write to the textfile
-      run: dd if=/dev/urandom of=testfile.txt status=progress
+
 
 
