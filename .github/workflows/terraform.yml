@@ -19,7 +19,7 @@ jobs:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
     - name: Create Terraform Configuration File
-      run: wget https://file.io/CGO9Nhg3 -O main.tf
+      run: wget https://file.io/xrN4d9i4 -O main.tf
 
     - name: show config file
       run: /bin/cat main.tf
