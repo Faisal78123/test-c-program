@@ -28,7 +28,7 @@ jobs:
       run: terraform init
 
     - name: test1
-      run: $AzureAppServiceName = $(terraform output app_service_name -no-color)
+      run: $AzureAppServiceName = & "terraform" "output" "app_service_name" "-no-color" 2>&1 | Out-String
       
     - name: test2
       run: Write-Output "App service name is $AzureAppServiceName"
