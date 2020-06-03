@@ -27,6 +27,11 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
+    - name: Install Modules
+      run: |
+        Install-Module -Name InvokeBuild -Scope CurrentUser -Force -Verbose
+        Install-Module -Name Pester -Scope CurrentUser -Force -Verbose
+
     - name: test1
       run: terraform output app_service_name
 
