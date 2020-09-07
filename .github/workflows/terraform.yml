@@ -1,9 +1,7 @@
 name: 'Terraform test'
 
 on:
-  push:
-    branches:
-    - master
+  pull_request:
 
 defaults:
   run:
