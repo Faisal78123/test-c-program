@@ -26,9 +26,9 @@ jobs:
     # Runs a set of commands using the runners shell
 #    - name: run the program
 #      run: bin/helloworld.exe
-    - uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: `2.2.208`
+     - uses: actions/setup-dotnet@v1
+       with:
+         dotnet-version: '2.2.208' 
 
 
 
