@@ -28,7 +28,7 @@ jobs:
 #      run: bin/helloworld.exe
     - uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 2.2.208
+        dotnet-version: `2.2.208`
 
 
 
