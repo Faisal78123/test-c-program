@@ -35,7 +35,7 @@ jobs:
 
 
       - name: testmyownaction
-        uses: faisal78123/checkout
+        uses: faisal78123/checkout@v1
 
 
 
